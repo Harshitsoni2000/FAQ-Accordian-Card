@@ -120,7 +120,7 @@
                 z-index:2;
                 cursor: pointer;
                 @include responsive(tab-land) {
-                    background: var(--container-background);
+                    background: #fff;
                 }
 
                 &:hover {

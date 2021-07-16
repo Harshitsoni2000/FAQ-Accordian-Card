@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- [Solution URL](https://github.com/Harshitsoni2000/Chat-app-CSS-Illustration-with-amazing-Animations)
-- [Live Site URL](https://harshitsoni2000.github.io/Chat-app-CSS-Illustration-with-amazing-Animations/)
+- [Solution URL](https://github.com/Harshitsoni2000/FAQ-Accordian-Card)
+- [Live Site URL](https://harshitsoni2000.github.io/FAQ-Accordian-Card/)
 
 ## My process
 
