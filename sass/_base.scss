@@ -1,0 +1,101 @@
+:root {
+    --background-gradient: linear-gradient(to right bottom, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    --container-background: hsl(240, 5%, 91%);
+    --color-heading-primary: hsl(238, 29%, 16%);
+    --color-heading-secondary: hsl(237, 12%, 33%);
+    --color-para: hsl(240, 6%, 50%);
+}
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@mixin responsive($breakpoint) {
+    @if $breakpoint == tab-land {
+        @media only screen and (min-width: 56.25em) {@content};
+    }
+    @if $breakpoint == desktop {
+        @media only screen and (min-width: 75em) {@content};
+    }
+}
+
+html {
+    font-size: 47.5%;
+
+    @include responsive(tab-land) {
+        font-size: 55%;
+    }
+    @include responsive(desktop) {
+        font-size: 62.5%;
+    }
+}
+
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Kumbh Sans', sans-serif;
+    background: var(--background-gradient) no-repeat;
+    min-height: 100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.5;
+    padding: 15rem 0 5rem;
+    position: relative;
+}
+
+::selection {
+    background: hsl(273, 75%, 66%);
+    color: #fff;
+}
+
+.heading-primary {
+    text-align: center;
+    @include responsive(tab-land) {
+        text-align: left;
+    }
+    color: var(--color-heading-primary);
+    font-weight: 700;
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+.heading-secondary {
+    color: var(--color-heading-secondary);
+    font-weight: 400;
+    font-size: 2rem;
+    transition: all 0.15s;
+}
+
+.heading-selected {
+    color: var(--color-heading-primary);
+    font-weight: 700;
+
+    .arrow {
+        & > * {
+            transform: rotate(-180deg);
+        }
+    }
+}
+
+.para {
+    color: var(--color-para);
+    font-size: 1.4rem;
+}
+
+.black {
+
+    span {
+        font-size: 6rem;
+        align-self: center;
+        display: inline-block;
+        background: var(--background-gradient);
+        -webkit-background-clip: text;
+        color: transparent;
+        font-weight: 700;
+    }
+}
